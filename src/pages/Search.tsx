@@ -1,7 +1,7 @@
 function Search() {
-return (
-    <div></div>
-)
+  return (
+    <div />
+  );
 }
 
 export default Search;
