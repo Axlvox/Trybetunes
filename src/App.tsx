@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Search from './pages/Search';
 import Album from './pages/Album';
+import './index.css';
 // import Loading from './pages/Loading';
 // const navigate = useNavigate();
 
@@ -10,7 +11,6 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={ <Login /> } />
-        {/* <Route path="/Loading" element={ <Loading /> } /> */}
         <Route path="/search" element={ <Search /> } />
         <Route path="/album/:id" element={ <Album /> } />
       </Routes>
