@@ -9,7 +9,7 @@ import './index.css';
 
 function App() {
   return (
-    <div>
+    <main>
       <Routes>
         <Route path="/" element={ <Login /> } />
         <Route element={ <Layout /> }>
@@ -18,7 +18,7 @@ function App() {
         </Route>
       </Routes>
       <p>Trybetunes</p>
-    </div>
+    </main>
   );
 }
 
