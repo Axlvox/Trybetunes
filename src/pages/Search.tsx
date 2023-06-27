@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from './Loading';
@@ -10,18 +10,18 @@ function Search() {
   const [data, setData] = useState<AlbumType[]>([]);
   const [searchArtist, setSearchArtist] = useState('');
 
-  async function fetchData() {
+  const fetchData = useCallback(async () => {
     try {
       const response = await searchAlbumsAPI(artist);
       setData(response);
     } catch (error) {
       console.error('Erro ao buscar dados:', error);
     }
-  }
+  }, [artist]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   const handleArtist = (e: React.ChangeEvent<HTMLInputElement>) => {
     setArtist(e.target.value);
