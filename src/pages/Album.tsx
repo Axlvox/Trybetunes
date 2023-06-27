@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import MusicCard from './MusicCard';
+import MusicCard from '../../MusicCard';
 import getMusics from '../services/musicsAPI';
 import Loading from './Loading';
 import { AlbumType, SongType } from '../types';
